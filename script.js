@@ -57,7 +57,7 @@ $(document).ready(function(){
         var dayscount2 = lastmonth.getDate();
         if(month1==0){
             year1 = year1 -1 ;
-            month1 = 11;
+            month1 = 12;
         };
         $("#year").text(year1);
         $("#month").text(month1);
