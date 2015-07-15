@@ -43,6 +43,10 @@ $(document).ready(function(){
             $(this).removeClass('notmonthnow');
             $(this).removeClass('weekend');
         });
+        var theday = new Date();
+        var yearnow = theday.getFullYear();
+        var monthnow = theday.getMonth();
+        var today = theday.getDate();
         var year1 = $("#year").text();
         var month1 = $("#month").text()-1;
         var monthfirst = new Date(year1,month1-1,1);
@@ -61,6 +65,9 @@ $(document).ready(function(){
           for(k = 0;k < 7;k++){
             id = i*7 + k;
             date_str = id - firstday + 1;
+            if(year1==yearnow&&month1==monthnow+1&&date_str==today){
+                $("td:eq("+id+")").addClass('today');
+            };
             if(date_str <= 0){
                 a = date_str + dayscount2;
                 $("td:eq("+id+")").text(a);
@@ -89,6 +96,10 @@ $(document).ready(function(){
             $(this).removeClass('notmonthnow');
             $(this).removeClass('weekend');
         });
+        var theday = new Date();
+        var yearnow = theday.getFullYear();
+        var monthnow = theday.getMonth();
+        var today = theday.getDate();
         var year1 = $("#year").text();
         var month1 = parseInt($("#month").text())+1;
         var monthfirst = new Date(year1,month1-1,1);
@@ -107,6 +118,9 @@ $(document).ready(function(){
         for(k = 0;k < 7;k++){
             id = i*7 + k;
             date_str = id - firstday + 1;
+            if(year1==yearnow&&month1==monthnow+1&&date_str==today){
+                $("td:eq("+id+")").addClass('today');
+            };
             if(date_str <= 0){
                 a = date_str + dayscount2;
                 $("td:eq("+id+")").text(a);
