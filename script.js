@@ -16,7 +16,7 @@ $(document).ready(function(){
     for(i = 0;i < 6;i++){
         for(k = 0;k < 7;k++){
             id = i*7 + k;
-            date_str = id - firstday + 1;
+            date_str = id - firstday + 2;
             if(date_str <= 0){
                 a = date_str + dayscount2;
                 $("td:eq("+id+")").text(a);
@@ -25,7 +25,7 @@ $(document).ready(function(){
                 $("td:eq("+id+")").text(date_str);
                 if(date_str == today){
                     $("td:eq("+id+")").addClass('today');
-                }else if(id%7 == 6 || id%7 == 0){
+                }else if(id%7 == 6 || id%7 == 5){
                     $("td:eq("+id+")").addClass('weekend');
                 }
             } else if( date_str > dayscount){
@@ -64,7 +64,7 @@ $(document).ready(function(){
         for(i = 0;i < 6;i++){
           for(k = 0;k < 7;k++){
             id = i*7 + k;
-            date_str = id - firstday + 1;
+            date_str = id - firstday + 2;
             if(year1==yearnow&&month1==monthnow+1&&date_str==today){
                 $("td:eq("+id+")").addClass('today');
             };
@@ -73,7 +73,7 @@ $(document).ready(function(){
                 $("td:eq("+id+")").text(a);
                 $("td:eq("+id+")").addClass('notmonthnow');
             } else if( date_str > 0 && date_str <= dayscount){
-                if(id%7 == 6 || id%7 == 0){
+                if(id%7 == 6 || id%7 == 5){
                     $("td:eq("+id+")").text(date_str);
                     $("td:eq("+id+")").addClass('weekend');
                 }else {
@@ -117,7 +117,7 @@ $(document).ready(function(){
         for(i = 0;i < 6;i++){
         for(k = 0;k < 7;k++){
             id = i*7 + k;
-            date_str = id - firstday + 1;
+            date_str = id - firstday + 2;
             if(year1==yearnow&&month1==monthnow+1&&date_str==today){
                 $("td:eq("+id+")").addClass('today');
             };
@@ -126,7 +126,7 @@ $(document).ready(function(){
                 $("td:eq("+id+")").text(a);
                 $("td:eq("+id+")").addClass('notmonthnow');
             } else if( date_str > 0 && date_str <= dayscount){
-                if(id%7 == 6 || id%7 == 0){
+                if(id%7 == 6 || id%7 == 5){
                     $("td:eq("+id+")").text(date_str);
                     $("td:eq("+id+")").addClass('weekend');
                 }else {
